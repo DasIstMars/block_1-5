@@ -25,7 +25,8 @@ button {
 /*CONTENT*/
 .s-section {
     height: 235px;
-    
+    border-top: 1px solid #D9FFF5;
+    border-bottom: 1px solid #F8F8F8;
     background-color: #F8F8F8;
 }
 @media (min-width: 768px) {
@@ -34,6 +35,7 @@ button {
     }
 }
 .s-title {
+    position: relative;
     height: 80px;
     padding: 16px;
     border-top: 1px solid #D9FFF5;
@@ -50,6 +52,22 @@ button {
         padding: 16px 32px;
     }
 }
+.s-title::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 81px;
+    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.00) 100%);
+    top: 92px;
+    right: 0;
+    z-index: 100;
+}
+@media (min-width: 768px) {
+    .s-title::after {
+        display: none;
+    }
+}
+
 .s-title__text {
     color: #7E7E82;
     font-family: 'TT Lakes', sans-serif;
@@ -65,10 +83,10 @@ button {
     height: 126px;
     padding-top: 16px;
     padding-left: 16px;
-    border: 1px solid red;
   }
 @media (min-width: 768px) {
     .s-nav {
+        height: 185px;
         padding-top: 24px;
         padding-left: 32px;
     }
@@ -159,7 +177,17 @@ button {
         display: flex;
         gap: 9px;
         margin-left: 32px;
+    }
+    .s-section__button--minimalize {
+        margin-left: 32px;
         margin-bottom: 34px;
+    }
+    .s-section__button--expanded {
+        margin-bottom: 14px;
+        margin-top: 46px;
+    }
+    .s-expand-button__img--top {
+        transform: rotate(180deg);
     }
 }
 .s-expand-button__text {

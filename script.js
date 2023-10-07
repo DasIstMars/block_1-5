@@ -27,9 +27,19 @@ const enableSwiper = function() {
 breakpoint.addListener(breakpointChecker);
 breakpointChecker();
 
-let expantButton = document.querySelector('.s-expand-button')
-let expand = document.querySelector('.s-nav--minimalize')
+let expandButton = document.querySelector('.s-expand-button');
+let expand = document.querySelector('.s-nav--minimalize');
+let expandButtonMinimalize = document.querySelector('.s-section__button--minimalize');
+let expantButtonText = document.querySelector('.s-expand-button__text');
+let expandButtonImg = document.querySelector('.s-expand-button__img--bottom');
 
-expantButton.onclick = function() {
+expandButton.onclick = function() {
   expand.classList.toggle('s-nav--expanded');
+  expandButtonMinimalize.classList.toggle('s-section__button--expanded');
+  expandButtonImg.classList.toggle('s-expand-button__img--top');
+  if (expantButtonText.textContent == 'Показать все') {
+    expantButtonText.textContent = 'Скрыть';
+  } else {
+    expantButtonText.textContent = 'Показать все';
+  } 
 };
