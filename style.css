@@ -25,16 +25,29 @@ button {
 /*CONTENT*/
 .s-section {
     height: 235px;
+    
     background-color: #F8F8F8;
+}
+@media (min-width: 768px) {
+    .s-section {
+        height: auto;
+    }
 }
 .s-title {
     height: 80px;
     padding: 16px;
+    border-top: 1px solid #D9FFF5;
     background: linear-gradient(90deg, #F8F8F8 1.39%, #FFF 100%);
 }
 @media (min-width: 768px) {
     .s-title {
         height: 56px;
+        padding: 16px 24px;
+    }
+}
+@media (min-width: 1120px) {
+    .s-title {
+        padding: 16px 32px;
     }
 }
 .s-title__text {
@@ -48,11 +61,48 @@ button {
     text-transform: uppercase;
 }
 .s-nav {
-    width: 320px;
-    height: 116px;
-    padding: 16px;
+    width: auto;
+    height: 126px;
+    padding-top: 16px;
+    padding-left: 16px;
+    border: 1px solid red;
   }
+@media (min-width: 768px) {
+    .s-nav {
+        padding-top: 24px;
+        padding-left: 32px;
+    }
 
+}
+@media (min-width: 1120px) {
+    .s-nav {
+        height: 185px;
+        padding-top: 24px;
+        padding-left: 32px;
+    }
+    .s-nav--minimalize {
+        height: 185px;
+    }
+    .s-nav--expanded {
+        height: 275px;
+    }
+}
+
+@media (min-width: 768px) {
+    .s-nav__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 16px 24px;
+        overflow: hidden;
+    }
+}
+@media (min-width: 1120px) {
+    .s-nav__list {
+        gap: 16px 32px;
+    }
+
+}
 .s-nav__link {
     height: 40px;
     width: 40px;
@@ -71,8 +121,20 @@ button {
     align-items: center;
     padding: 16px; /* ??? */
 }
-.swiper-pagination {
-    position:static;
+@media (min-width: 768px) {
+    .s-nav__item {
+        width: 224px;
+    }
+}
+@media (min-width: 1120px) {
+    .s-nav__item {
+        width: 240px;
+    }
+}
+@media (min-width: 768px) {
+    .swiper-pagination {
+        display: none;
+    }
 }
 .swiper-pagination-bullet {
     width: 12px;
@@ -89,6 +151,14 @@ button {
         display: flex;
         gap: 9px;
         margin: 24px;
+        margin-bottom: 34px;
+    }
+}
+@media (min-width: 1120px) {
+    .s-section__button {
+        display: flex;
+        gap: 9px;
+        margin-left: 32px;
         margin-bottom: 34px;
     }
 }
